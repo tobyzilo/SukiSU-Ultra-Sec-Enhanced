@@ -4,6 +4,8 @@
 
 [KernelSU](https://github.com/tiann/KernelSU) をベースとした Android デバイスの root ソリューション
 
+>オリジナル版のSukiSU Ultraに比べて、このバージョンは従来の設計に基づき、セキュリティ検証を追加しました。​
+
 **試験中なビルドです！自己責任で使用してください！**<br>
 このソリューションは [KernelSU](https://github.com/tiann/KernelSU) に基づいていますが、試験中なビルドです。
 
