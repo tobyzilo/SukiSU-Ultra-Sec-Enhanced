@@ -48,6 +48,9 @@ import androidx.lifecycle.lifecycleScope
 import com.sukisu.ultra.ui.viewmodel.HomeViewModel
 import com.sukisu.ultra.ui.viewmodel.SuperUserViewModel
 import kotlinx.coroutines.launch
+import com.sukisu.ultra.security.BiometricHelper
+import com.sukisu.ultra.security.BiometricAuthCallback
+import com.sukisu.ultra.security.BiometricCapability
 
 class MainActivity : ComponentActivity() {
     private lateinit var superUserViewModel: SuperUserViewModel
@@ -84,6 +87,8 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+
 
     override fun attachBaseContext(newBase: Context) {
         val prefs = newBase.getSharedPreferences("settings", MODE_PRIVATE)
@@ -291,6 +296,7 @@ private fun BottomBar(navController: NavHostController) {
     val fullFeatured = isManager && !Natives.requireNewKernel() && rootAvailable()
     val kpmVersion = getKpmVersion()
     val cardColor = MaterialTheme.colorScheme.surfaceContainer
+
 
     // 检查是否显示KPM
     val showKpmInfo = LocalContext.current.getSharedPreferences("settings", Context.MODE_PRIVATE)
