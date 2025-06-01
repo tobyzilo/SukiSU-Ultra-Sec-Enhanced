@@ -4,6 +4,8 @@
 
 基于 [KernelSU](https://github.com/tiann/KernelSU) 的安卓设备 root 解决方案
 
+>注意：相较于原版的SukiSU Ultra此版本在原来的基础上增加了安全验证
+
 **实验性! 使用风险自负!**
 
 > 这是非官方分支，保留所有权利 [@tiann](https://github.com/tiann)
