@@ -4,6 +4,8 @@
 
 Android device root solution based on [KernelSU](https://github.com/tiann/KernelSU)
 
+>Compared to the original SukiSU Ultra, this version has added security verification based on the previous design.​
+
 **Experimental! Use at your own risk!** This solution is based on [KernelSU](https://github.com/tiann/KernelSU) and is experimental!
 
 > This is an unofficial fork. All rights are reserved to [@tiann](https://github.com/tiann)
