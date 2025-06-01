@@ -7,6 +7,7 @@ import android.database.ContentObserver
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -49,12 +50,11 @@ import com.sukisu.ultra.ui.viewmodel.HomeViewModel
 import com.sukisu.ultra.ui.viewmodel.SuperUserViewModel
 import kotlinx.coroutines.launch
 import com.sukisu.ultra.security.BiometricHelper
-import com.sukisu.ultra.security.BiometricAuthCallback
-import com.sukisu.ultra.security.BiometricCapability
 
 class MainActivity : ComponentActivity() {
     private lateinit var superUserViewModel: SuperUserViewModel
     private lateinit var homeViewModel: HomeViewModel
+    private lateinit var biometricHelper: BiometricHelper
 
     private inner class ThemeChangeContentObserver(
         handler: Handler,
@@ -124,6 +124,10 @@ class MainActivity : ComponentActivity() {
 
         super.onCreate(savedInstanceState)
 
+        // 初始化 BiometricHelper
+        biometricHelper = BiometricHelper(this)
+
+
         // 初始化 SuperUserViewModel
         superUserViewModel = SuperUserViewModel()
 
@@ -165,6 +169,7 @@ class MainActivity : ComponentActivity() {
             }
         }
 
+
         contentResolver.registerContentObserver(
             android.provider.Settings.System.getUriFor("ui_night_mode"),
             false,
@@ -181,6 +186,8 @@ class MainActivity : ComponentActivity() {
             install()
             UltraToolInstall.tryToInstall()
         }
+
+        biometricHelper.showBiometricCapabilityToast()
 
         setContent {
             KernelSUTheme {

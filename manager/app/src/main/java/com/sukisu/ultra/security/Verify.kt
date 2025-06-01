@@ -8,6 +8,11 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 import java.util.concurrent.Executor
 
+
+/**
+ * @author tobyzilo
+ * @date 2025/06/01.
+ */
 class BiometricHelper(private val context: Context) {
 //
     private val biometricManager = BiometricManager.from(context)
