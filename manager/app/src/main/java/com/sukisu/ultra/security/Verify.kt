@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentActivity
 import java.util.concurrent.Executor
 
 class BiometricHelper(private val context: Context) {
-
+//
     private val biometricManager = BiometricManager.from(context)
 
     /**
