@@ -4,6 +4,8 @@
 
 [KernelSU](https://github.com/tiann/KernelSU) tabanlı Android cihaz root çözümü
 
+>Orijinal SukiSU Ultra'ya kıyasla, bu sürüm önceki tasarım üzerine güvenlik doğrulaması eklenmiştir.​
+
 **Deneysel! Kullanım riski size aittir!**
 
 > Bu resmi olmayan bir daldır, tüm hakları saklıdır [@tiann](https://github.com/tiann)
